@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "9c64d02f-460a-4580-802f-c0ac71b731ed",
+    "name": "MERN CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51023837",
+    "_collection_link": "https://go.postman.co/collection/51023837-9c64d02f-460a-4580-802f-c0ac71b731ed?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CRUD-GET",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"head phones\",\r\n    \"description\":\"excellent for audio\",\r\n    \"price\":200,\r\n    \"quantity\":50\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CRUD-POST",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"headphones\",\r\n    \"description\":\"excellent for audio\",\r\n    \"price\":200,\r\n    \"quantity\":50\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CRUD-PUT",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"bolt headphones\",\r\n    \"description\":\"excellent for audio\",\r\n    \"price\":200,\r\n    \"quantity\":50\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/6a86b626b1530bc705a55b28",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "6a86b626b1530bc705a55b28"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CRUD-DELETE",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"bolt headphones\",\r\n    \"description\":\"excellent for audio\",\r\n    \"price\":200,\r\n    \"quantity\":50\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/6a86b626b1530bc705a55b28",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "6a86b626b1530bc705a55b28"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
