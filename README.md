@@ -13,7 +13,7 @@ A simple RESTful API built with Node.js, Express, and MongoDB to perform CRUD op
 1. Clone the repo and run `npm install`
 2. Create a `.env` file (see `.env.example`) with your MongoDB URI
 3. Run `node server.js`
-4. Server runs at http://localhost:3000
+4. Server runs at http://localhost:5000
 
 ## API Endpoints
 | Method | Endpoint | Description |
