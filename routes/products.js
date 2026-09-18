@@ -1,5 +1,7 @@
 const express=require("express")
 const router=express.Router()
+const protect = require('../middleware/auth');
+
 
 const Product = require("../models/Products")
 
@@ -32,7 +34,7 @@ router.get("/:id",async (req,res) => {
 
 // post create new product
 
-router.post("/",async (req,res) => {
+router.post("/",protect,async (req,res) => {
     try {
         const product=await Product.create(req.body)
         res.status(201).json({
@@ -48,7 +50,7 @@ router.post("/",async (req,res) => {
 
 // put-update the product
 
-router.put("/:id",async (req,res) => {
+router.put("/:id",protect,async (req,res) => {
     try {
         const product=await Product.findByIdAndUpdate(req.params.id,req.body,{
             new:true,
@@ -73,7 +75,7 @@ router.put("/:id",async (req,res) => {
 
 // delete the product
 
-router.delete("/:id",async (req,res) => {
+router.delete("/:id",protect,async (req,res) => {
     try {
         const product=await Product.findByIdAndDelete(req.params.id)
       
